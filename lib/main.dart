@@ -43,7 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
     CalendarTab(),
     Placeholder(),
     Placeholder(),
-    Placeholder(),
   ];
 
   void onTabTapped(int index) {
