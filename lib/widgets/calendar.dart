@@ -61,7 +61,7 @@ class _CalendarTabState extends State<CalendarTab> {
             formatButtonVisible: false,
           ),
           calendarFormat: CalendarFormat.month,
-          focusedDay: DateTime.now(),
+          focusedDay: _selectedDate,
           firstDay: DateTime.utc(2023, 01, 01),
           lastDay: DateTime.utc(2030, 12, 31),
           selectedDayPredicate: (day) {

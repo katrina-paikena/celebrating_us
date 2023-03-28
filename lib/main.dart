@@ -1,6 +1,8 @@
 import 'package:celebrating_us/service/service_locator.dart';
 import 'package:celebrating_us/service/storage/storage_service.dart';
 import 'package:celebrating_us/widgets/calendar.dart';
+import 'package:celebrating_us/widgets/list.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -39,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<Widget> _children = [
     CalendarTab(),
-    Placeholder(),
+    ListTab(),
     Placeholder(),
   ];
 
