@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 import '../model/celebration.dart';
+import '../service/notifications/notification_service.dart';
 import '../service/service_locator.dart';
 import '../service/storage/storage_service.dart';
 
@@ -165,6 +166,11 @@ class _CalendarTabState extends State<CalendarTab> {
                   type: CelebrationType.birthday,
                 );
                 await getIt.get<StorageService>().saveCelebration(celebration);
+                getIt.get<NotificationService>().showNotification(
+                    "Upcoming Celebration",
+                    "Janis has his birthday tomorrow, help him celebrate!"
+                );
+
                 Navigator.pop(context);
                 _reloadData();
               }

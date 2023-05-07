@@ -1,3 +1,4 @@
+import 'package:celebrating_us/service/notifications/notification_service.dart';
 import 'package:celebrating_us/service/service_locator.dart';
 import 'package:celebrating_us/service/storage/storage_service.dart';
 import 'package:celebrating_us/widgets/calendar.dart';
@@ -8,7 +9,10 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setupServiceLocator();
-  //Initialize storage
+
+  // Initialize the Notification Service
+  await getIt<NotificationService>().init();
+  // Initialize storage
   await getIt<StorageService>().open();
 
   runApp(MyApp());
